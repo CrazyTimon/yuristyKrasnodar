@@ -130,3 +130,44 @@
 	margin-top: 25px;
 	padding-bottom: 25px;
 }
+
+.advokats_block{
+	color: #42100D;
+}
+
+.advokat{
+	background: #f4ddb4;
+	margin-left: 60px;
+	width: 27%;
+	/*box-shadow: 0px -20px 12px -1px #FFF, -6px 0px 30px #DADADA, 10px 0px 30px #DADADA;*/
+}
+
+
+.advokat_ava{
+	margin: 30px 0px 20px 0px;
+	border: 1px solid #e5e5e5;
+}
+
+.advokat_name{
+	font-size:21px;
+}
+
+.advokat_description{
+	font-size: 15px;
+	margin: 30px 0px 60px 0px;
+}
+
+.advokat__foter{
+	height: 23px;
+	background: url(../img/advokats_bottom_shadow.png);
+	width: 100%;
+	background-size: cover;
+	position: absolute;
+	margin-left: -15px;
+}
+
+.responce{
+	background: url(../img/responce.jpg);
+	height: 600px;
+	background-size: cover;
+}
