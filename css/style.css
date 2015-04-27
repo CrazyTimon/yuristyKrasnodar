@@ -139,6 +139,8 @@
 	background: #f4ddb4;
 	margin-left: 60px;
 	width: 27%;
+	border: 1px solid #D8D8D8;
+	border-bottom: 0;
 	/*box-shadow: 0px -20px 12px -1px #FFF, -6px 0px 30px #DADADA, 10px 0px 30px #DADADA;*/
 }
 
@@ -168,6 +170,46 @@
 
 .responce{
 	background: url(../img/responce.jpg);
-	height: 600px;
 	background-size: cover;
+	color: #ffffff;
+	margin-top: 50px;
+}
+
+.responce_avatar:before{
+	width: 164px;
+	height: 164px;
+	display: block;
+	content: '';
+	position: absolute;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35) inset;
+	border-radius: 100%;
+	border: 5px solid #FDD77A;
+	margin: -5px 0px 0px -5px;
+}
+.responce_avatar{
+	width: 164px;
+	height: 164px;
+	border: 5px solid #FDD77A;
+	border-radius: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.responce_quote{
+	background: #FFF;
+	color: #42100D;
+	border-radius: 12px;
+	padding: 35px 30px 0px 30px;
+	border: 2px solid #FDD77A;
+	font-size: 16px;
+	margin: 20px 0px 50px 0px;
+}
+
+.responce_author{
+	font-weight: bold;
+	margin: 20px 0px;
+}
+
+.margin30-0{
+	margin: 30px 0px;
 }
