@@ -51,7 +51,6 @@
 }
 
 .header__main{
-	height: 500px;
 	margin-top: -100px;
 	padding-top: 100px;
 	z-index: 1;
@@ -59,10 +58,62 @@
 	background-size: cover;
 	margin-bottom: 0px;
   	border: 0;
+  	overflow: hidden;
+  	padding-bottom: 100px;
 }
 
 .header__main h1 {
 	font-size: 38px;
+	text-shadow: 2px 1px 0px #42100D, -1px -1px 4px #42100D;
+}
+
+.response_form{
+	background: #ffffff;
+	padding: 20px 30px;
+	margin-top: 30px;
+	color: #42100d;
+	border: 1px solid #d7d1c8;
+}
+
+.sucks_1, .sucks_2{
+	background: #ffffff;
+	border-bottom: 1px solid #d7d1c8;
+	border-left: 1px solid #d7d1c8;
+	border-right: 1px solid #d7d1c8;
+	height: 7px;
+}
+
+.sucks_1{
+}
+
+.sucks_2{
+	margin: 0px 15px;
+}
+
+.beach{
+	background: url(../img/beach.png);
+	height: 522px;
+	width: 606px;
+	position: absolute;
+	z-index: -1;
+}
+
+.response_form input{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #D7D1C8;
+	margin: 0px 0px 15px 0px;
+}
+
+.response_form button{
+	width: 100%;
+    font-size: 20px;
+}
+
+.introduce{
+	font-size: 25px;
+	line-height: 28px;
+	margin: -5px 0px 25px 0px;
 }
 
 .specialization_block{
@@ -111,7 +162,7 @@
 	color: #fdd77a;
 }
 
-.options_block .content button{
+button.btn-default{
 	background: #ffe400; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffe400 0%, #e7af3e 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe400), color-stop(100%,#e7af3e)); /* Chrome,Safari4+ */
@@ -120,6 +171,9 @@
 	background: -ms-linear-gradient(top,  #ffe400 0%,#e7af3e 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ffe400 0%,#e7af3e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe400', endColorstr='#e7af3e',GradientType=0 ); /* IE6-9 */
+}
+
+.options_block .content button{
 	color: #42100d;
 	font-size: 18px;
 	width: 100%;
