@@ -65,12 +65,12 @@
 .header__main h1 {
 	font-size: 38px;
 	text-shadow: 2px 1px 0px #42100D, -1px -1px 4px #42100D;
+	margin-bottom: 30px;
 }
 
 .response_form{
 	background: #ffffff;
 	padding: 20px 30px;
-	margin-top: 30px;
 	color: #42100d;
 	border: 1px solid #d7d1c8;
 }
@@ -81,13 +81,18 @@
 	border-left: 1px solid #d7d1c8;
 	border-right: 1px solid #d7d1c8;
 	height: 7px;
+	position: absolute;
 }
 
 .sucks_1{
+	margin: 21px 0px 0px -23px;
+	width: 97%;
 }
 
 .sucks_2{
-	margin: 0px 15px;
+	margin: 28px 0px 0px -16px;
+	position: absolute;
+	width: 94%;
 }
 
 .beach{
@@ -118,6 +123,7 @@
 
 .specialization_block{
 	color: #42100d;
+	margin-bottom: 50px;
 }
 
 .specialization_item{
@@ -128,6 +134,7 @@
 .texturedblock{
 	background: url(../img/whytheycheckus.png);
 	color: #42100d;
+	padding-bottom: 30px;
 }
 
 .texturedblock h1{
@@ -145,6 +152,14 @@
 	border-top: 3px solid #42100d;
 	background: #fdd77a;
 	padding: 10px 0px;
+	height: 80px;
+	line-height: 50px;
+}
+
+.options_block .header span{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 30px;
 }
 
 .options_block .content{
@@ -156,6 +171,7 @@
 
 .options_block .content .content_box{
 	margin: 10px 0px;
+	height: 420px;
 }
 
 .color_yellow{
@@ -227,6 +243,7 @@ button.btn-default{
 	background-size: cover;
 	color: #ffffff;
 	margin-top: 50px;
+	padding-bottom: 35px;
 }
 
 .responce_avatar:before{
