@@ -355,12 +355,13 @@
 				$.ajax({
 					type: 'POST',
 					url: post_url,
-					data: post_data/*,
+					data: post_data,
 					success: function(msg) {
-						$(form).fadeOut(500, function(){
-							form.html(msg).fadeIn();
-						});
-					}*/
+						window.location.href='google.com'
+						// $(form).fadeOut(500, function(){
+						// 	form.html(msg).fadeIn();
+						// });
+					}
 				});
 			});
 		});
