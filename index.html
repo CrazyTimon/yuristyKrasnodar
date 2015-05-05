@@ -34,14 +34,17 @@
 			<div class="row">
 				<div class="col-xs-12 text-center"><h1>Представительство в судах Краснодара и края</h1></div>
 				<div class="col-xs-5 col-xs-offset-7 text-center response_form">
-					<div class="introduce">
-						Оставьте заявку и получите<br><b>бесплатную консультацию</b><br>ведущего юриста
-					</div>
-					<input type="text" placeholder="Ваше имя">
-					<input type="text" placeholder="Ваш телефон">
-					<button type="button" class="btn btn-default">Получить консультацию</button>
-					<div class="sucks_1"></div>
-					<div class="sucks_2"></div>
+					<form action="send.php" class="js-sendform" method="post">
+						<div class="introduce">
+							Оставьте заявку и получите<br><b>бесплатную консультацию</b><br>ведущего юриста
+						</div>
+						<input type="hidden" name="message" value="Заявка на консультацию">
+						<input type="text" name="name" placeholder="Ваше имя">
+						<input type="text" name="phone" placeholder="Ваш телефон">
+						<button type="button" class="btn btn-default">Получить консультацию</button>
+						<div class="sucks_1"></div>
+						<div class="sucks_2"></div>
+					</form>
 				</div>
 				<div class="beach"></div>
 			</div>
@@ -278,14 +281,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-5 text-center response_form">
-					<div class="introduce">
-						Оставьте заявку и получите<br><b>бесплатную консультацию</b><br>ведущего юриста
-					</div>
-					<input type="text" placeholder="Ваше имя">
-					<input type="text" placeholder="Ваш телефон">
-					<button type="button" class="btn btn-default">Получить консультацию</button>
-					<div class="sucks_1"></div>
-					<div class="sucks_2"></div>
+					<form action="send.php" class="js-sendform" method="post">
+						<div class="introduce">
+							Оставьте заявку и получите<br><b>бесплатную консультацию</b><br>ведущего юриста
+						</div>
+						<input type="hidden" name="message" value="Заявка на консультацию">
+						<input type="text" name="name" placeholder="Ваше имя">
+						<input type="text" name="phone" placeholder="Ваш телефон">
+						<button type="button" class="btn btn-default">Получить консультацию</button>
+						<div class="sucks_1"></div>
+						<div class="sucks_2"></div>
+					</form>
 				</div>
 				<div class="col-xs-7">
 					<img src="img/map.png" alt="">
@@ -317,23 +323,47 @@
 	</nav>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Заказать звонок</h4>
-	      </div>
-	      <div class="modal-body">
-				<input type="text" placeholder="Ваше имя">
-				<input type="text" placeholder="Ваш телефон">
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" data-dismiss="modal" class="btn btn-default">Получить консультацию</button>
-	      </div>
-	    </div>
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Заказать звонок</h4>
+			</div>
+			<form action="send.php" class="js-sendform" method="post">
+				<div class="modal-body">
+						<input type="text" name="name" placeholder="Ваше имя">
+						<input type="text" name="phone" placeholder="Ваш телефон">
+						<input type="hidden" name="message" value="Заказали звонок">
+				</div>
+				<div class="modal-footer">
+					<button type="button" data-dismiss="modal" class="btn btn-default">Получить консультацию</button>
+				</div>
+			</form>
+		</div>
 	  </div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script>
+		$(function(){
+			$('.js-sendform button').on('click', function(e){
+				e.preventDefault();
+				var form = $(e.currentTarget).parents('form');
+				var post_url = form.attr('action');
+				var post_data = form.serialize();
+				// $('#loader', form).html('<img src="images/loader.gif" /> Запрос обрабатывается...');
+				$.ajax({
+					type: 'POST',
+					url: post_url,
+					data: post_data/*,
+					success: function(msg) {
+						$(form).fadeOut(500, function(){
+							form.html(msg).fadeIn();
+						});
+					}*/
+				});
+			});
+		});
+	</script>
 </body>
 </html>
