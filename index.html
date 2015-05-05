@@ -23,7 +23,7 @@
 				</div>
 				<div class="col-xs-4 col-xs-offset-2 text-right">
 					<div class="phone"><img src="img/phone.png" alt="">8 (861) 204-07-74</div>
-					<a class="recall_me" href="">заказать звонок</a>
+					<span class="recall_me" data-toggle="modal" data-target="#myModal">заказать звонок</span>
 					<div class="adress">г. Краснодар, ул. Тургенева135/1 офис 511</div>
 				</div>
 			</div>
@@ -153,7 +153,7 @@
 							</table>
 						</p>
 					</div>
-					<button type="button" class="btn btn-default">оставить заявку</button>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">оставить заявку</button>
 				</div>
 			</div>
 			<div class="col-xs-4 options_block">
@@ -174,7 +174,7 @@
 							Определение конкретной стоимости Вашего дела возможно только после выяснения нашим адвокатом всех подробностей Вашей проблемы.
 						</p>
 					</div>
-					<button type="button" class="btn btn-default">оставить заявку</button>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">оставить заявку</button>
 				</div>
 			</div>
 			<div class="col-xs-4 options_block">
@@ -189,7 +189,7 @@
 						<p>Обжалование действий и бездействий должностных лиц и судебных решений;</p>
 						<p>Считаете, что иные Ваши права нарушены и необходима помощь юриста, чтобы защитить Ваши интересы?</p>
 					</div>
-					<button type="button" class="btn btn-default">оставить заявку</button>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">оставить заявку</button>
 				</div>
 			</div>
 		</div>
@@ -315,5 +315,25 @@
 			</div>
 		</div>
 	</nav>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Заказать звонок</h4>
+	      </div>
+	      <div class="modal-body">
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Ваш телефон">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" data-dismiss="modal" class="btn btn-default">Получить консультацию</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
