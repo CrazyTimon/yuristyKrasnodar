@@ -352,7 +352,7 @@
 				var post_url = form.attr('action');
 				var post_data = form.serialize();
 				var phoneCondition = form.find('[name=phone]')[0].value.length >= 5;
-				var nameCondition = form.find('[name=phone]')[0].value.length > 0;
+				var nameCondition = form.find('[name=name]')[0].value.length > 0;
 				if( phoneCondition && nameCondition) {
 					$.ajax({
 						type: 'POST',
