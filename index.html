@@ -351,18 +351,25 @@
 				var form = $(e.currentTarget).parents('form');
 				var post_url = form.attr('action');
 				var post_data = form.serialize();
-				// $('#loader', form).html('<img src="images/loader.gif" /> Запрос обрабатывается...');
-				$.ajax({
-					type: 'POST',
-					url: post_url,
-					data: post_data,
-					success: function(msg) {
-						window.location.href='google.com'
-						// $(form).fadeOut(500, function(){
-						// 	form.html(msg).fadeIn();
-						// });
+				var phoneCondition = form.find('[name=phone]')[0].value.length >= 5;
+				var nameCondition = form.find('[name=phone]')[0].value.length > 0;
+				if( phoneCondition && nameCondition) {
+					$.ajax({
+						type: 'POST',
+						url: post_url,
+						data: post_data,
+						success: function(msg) {
+							window.location.href='http://advokaty-krasnodara.ru/land/ty.html';
+						}
+					});
+				} else {
+					if(!phoneCondition){
+						alert('Минимальная длина телефона должна быть 5 символов');
 					}
-				});
+					if(!nameCondition){
+						alert('Заполните поле "Ваше имя"');
+					}
+				}
 			});
 		});
 	</script>
