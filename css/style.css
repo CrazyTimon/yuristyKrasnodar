@@ -1,6 +1,11 @@
 @font-face {
-    font-family: SegoeUIRegular;
+    font-family: 'SegoeUIRegular';
     src: url(../fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.ttf);
+}
+
+@font-face {
+    font-family: 'SegoeUIRegular';
+    src: url(../fonts/SegoeUI/SegoeUIRegular/SegoeUIRegular.eot);
 }
 
 *{
@@ -124,6 +129,7 @@
 }
 
 .specialization_block{
+	margin-top: -101px;
 	color: #42100d;
 	margin-bottom: 50px;
 }
